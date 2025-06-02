@@ -3,17 +3,17 @@ import numpy as np
 import tensorflow as tf
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
 import pandas as pd
-import pickle
+import fickling
 
 
 # load ANN train model, pickle file, scaler, and encoder
 model = tf.keras.models.load_model('model.h5')
 with open('labelEncoder_gender.pkl', 'rb') as f:
-    labelEncoder_gender = pickle.load(f)
+    labelEncoder_gender = fickling.load(f)
 with open('ohe_geography.pkl', 'rb') as f:
-    ohe_geography = pickle.load(f)
+    ohe_geography = fickling.load(f)
 with open('scaler.pkl', 'rb') as f:
-    scaler = pickle.load(f)
+    scaler = fickling.load(f)
 
 
 # Streamlit app
